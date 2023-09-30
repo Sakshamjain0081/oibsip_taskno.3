@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div class="container">
+        <div class="todo-app">
+            <h2>To-Do List App <img src="images/icon.png"></h2>
+            <div class="task-input">
+                <div class="task-input-content">
+                  <span><ion-icon name="list"></ion-icon></span>
+                  <input type="text" id="input-box" placeholder="Add a new task">
+                </div>
+                <button class="addbtn" onclick="addtask()">Add</button>
+            </div>
+            <ul class="task-list">
+               <!-- <li class="checked">Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li> -->
+            </ul>
+        </div>
+     </div>
+
+
+
+
+    <script src="script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+</body>
+</html>

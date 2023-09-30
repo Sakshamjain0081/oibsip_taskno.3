@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Poppins', sans-serif; 
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg,#153677,#4e085f);
+    padding: 10px;
+}
+.todo-app{
+    background: #fff;
+    width: 100%;
+    max-width: 540px;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.todo-app h2{
+    margin-bottom: 20px;
+    color: #002765;
+    display: flex;
+}
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+.task-input{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.task-input-content{
+    margin-left: 20px;
+    margin-right: 0px;
+    height: 50px;
+    border-bottom: 2px solid #999;
+    border-top: 2px solid #999;
+    border-left: 2px solid #999;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #edeef0;
+}
+.task-input-content input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 5px 15px 5px 20px;
+    background: transparent;
+ }
+ 
+.task-input-content span{
+    position: relative;
+    top: 5px;
+    left: 5px;
+    font-size: 30px;
+    color:  #a49e9e;
+}
+.addbtn{
+    margin-right: 0px;
+    margin-left: -5px;
+    height: 50px;
+    width: 100px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+.task-list{
+    width: 100%;
+}
+.task-list .mainli{
+   list-style: none;
+   font-size: 17px;
+   font-weight: 400;
+   user-select: none;
+   cursor: pointer;
+   position: relative;
+   padding: 12px 8px 12px 50px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.task-list .mainli::before{
+    content: '';
+    position: absolute;
+    left: 0px;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+}
+.task-list .checked{
+    text-decoration: line-through;
+    color: #555;
+}
+.task-list .checked::before{
+    background-image: url(images/checked.png); 
+}
+
+
+.settings{
+    cursor: pointer;
+    position: absolute;
+    left: 420px;
+    top: 20px;
+}
+.task-edit{
+    position: relative;
+    background: #fff;
+    box-shadow: 0 0 6px rgba(0,0,0,0.15);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 2;
+    transform: scale(0);
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+}
+.settings:hover .task-edit{
+    transform: scale(1);
+}
+.task-edit span{
+    height: 30px;
+    font-size: 20px;
+    margin-bottom: 3px;
+    width: 100%;
+    
+}
+.task-edit span ion-icon{
+    margin-right: 0px;
+}
+.task-edit span:hover{
+    background: #ccc;
+}
